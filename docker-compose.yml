@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web:
+    build: .
+    command: ash -c "cd thunder-girl-demo;npm run serve"
+    ports:
+      - 1234:8080
+    volumes:
+      - ./app:/app
+    stdin_open: true
+    tty: true
